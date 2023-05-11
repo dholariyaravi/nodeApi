@@ -35,33 +35,33 @@ app.use(express.urlencoded({ extended: true }));
 require("./routes/tutorial.routes")(app);
 
 
-// app.get("/", (req, res) => {
-//     res.json({ message: "Welcome to ravi application." });
-//   });
+app.get("/", (req, res) => {
+    res.json({ message: "Welcome to ravi application." });
+  });
 
-//   app.get('/dec/:number1/:number2', function (req, res) {
-//     var num1 = parseInt(req.params.number1)
-//     var num2 = parseInt(req.params.number2)
-//     res.json({ message : num1 + num2});
-//   })
+  app.get('/dec/:number1/:number2', function (req, res) {
+    var num1 = parseInt(req.params.number1)
+    var num2 = parseInt(req.params.number2)
+    res.json({ message : num1 + num2});
+  })
 
-//   app.get('/pls/:number1/:number2', function (req, res) {
-//     var num1 = parseInt(req.params.number1)
-//     var num2 = parseInt(req.params.number2)
-//     res.json({ message : num1 - num2});
-//   })
+  app.get('/pls/:number1/:number2', function (req, res) {
+    var num1 = parseInt(req.params.number1)
+    var num2 = parseInt(req.params.number2)
+    res.json({ message : num1 - num2});
+  })
 
-//   app.get('/mod/:number1/:number2', function (req, res) {
-//     var num1 = parseInt(req.params.number1)
-//     var num2 = parseInt(req.params.number2)
-//     res.json({ message : num1 * num2});
-//   })
+  app.get('/mod/:number1/:number2', function (req, res) {
+    var num1 = parseInt(req.params.number1)
+    var num2 = parseInt(req.params.number2)
+    res.json({ message : num1 * num2});
+  })
 
-//   app.get('/sub/:number1/:number2', function (req, res) {
-//     var num1 = parseInt(req.params.number1)
-//     var num2 = parseInt(req.params.number2)
-//     res.json({ message : num1 / num2});
-//   })
+  app.get('/sub/:number1/:number2', function (req, res) {
+    var num1 = parseInt(req.params.number1)
+    var num2 = parseInt(req.params.number2)
+    res.json({ message : num1 / num2});
+  })
   
 
 
