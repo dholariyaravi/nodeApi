@@ -1,21 +1,6 @@
 const db = require("../model");
 const Tutorial = db.tutorials;
 
-//  ====================== findAll get =============================== 
-exports.findAll = (req, res) => {
-
-  Tutorial.find()
-    .then(data => {
-      res.send(data);
-    })
-    .catch(err => {
-      res.status(500).send({
-        message:
-          err.message || "Some error occurred while retrieving tutorials."
-      });
-    });
-};
-
 //  ====================== create navi bane post =============================== 
 exports.create = (req, res) => {
   // Validate request
@@ -44,6 +29,22 @@ exports.create = (req, res) => {
       });
     });
 };
+//  ====================== findAll get =============================== 
+exports.findAll = (req, res) => {
+
+  Tutorial.find()
+    .then(data => {
+      res.send(data);
+    })
+    .catch(err => {
+      res.status(500).send({
+        message:
+          err.message || "Some error occurred while retrieving tutorials."
+      });
+    });
+};
+
+
 
 // ======================== delete ======================= 
 

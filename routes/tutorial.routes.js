@@ -4,9 +4,9 @@ module.exports = app => {
 
     var router = require("express").Router();
 
+    router.post("/", tutorials.create);
     router.get("", tutorials.findAll);
 
-    router.post("/", tutorials.create);
     
     app.use('/api/tutorial', router);
 
